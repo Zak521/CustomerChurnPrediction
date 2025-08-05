@@ -17,7 +17,7 @@ df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors = 'coerce')
 
 #print(df['TotalCharges'].isnull().sum()) ## 11 rows null/blank
 
-#print(df[df['TotalCharges'].isnull()]) ## shows tthe rows, the tennure is 0, so they are a new customer
+#print(df[df['TotalCharges'].isnull()]) ## shows the rows, the tenure is 0, so they are a new customer
 
 ## fill it with 0
 df['TotalCharges'].fillna(0, inplace = True)
@@ -55,8 +55,8 @@ plt.title('Churn Percentage by Contract Type')
 plt.ylabel('Proportion')
 plt.show()
 
-## from above,  loaded in the data set saw that totalcharges had some blanks, fixed those
-## look at the percent of people who churn and people who dont, and various plots with churn rate
+## from above, loaded in the dataset saw that totalcharges had some blanks, fixed those
+## look at the percent of people who churn and people who don't, and various plots with churn rate
 
 
 ########################
@@ -95,7 +95,7 @@ print(df.dtypes)
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 
-## LogisticRegression, lr is my trained logistiuc regression model
+## LogisticRegression, lr is my trained logistic regression model
 lr = LogisticRegression(max_iter = 1000)
 lr.fit(X_train, y_train) ## trains logistic regression model using the training data
 
@@ -109,7 +109,7 @@ print(classification_report(y_test, y_pred))
 print("ROC AUC:", roc_auc_score(y_test, y_proba)) ## 0.841 ROC AUC
 
 print('_______________________________')
-## from above, have a target, churn, droped customerID, selected columns with 'object' data type,
+## from above, have a target, churn, dropped customerID, selected columns with 'object' data type,
 ## then convert the variables into our one-hot encoding,  seperate features and target, spilt the data,
 ## train our logistic regression modle to predict churn or not churn
 
@@ -138,13 +138,14 @@ plt.show()
 #print(df['Churn'].value_counts())
 
 
-## Power bi dashboard csv file##
+## Power BI dashboard csv file##
 
 df['PredictedChurn'] = rf.predict(X)
 df['PredictedProb'] = rf.predict_proba(X)[:, 1]
 
 ## Save to CSV for Power BI
 df.to_csv('customer_churn_predictions.csv', index=False)
+
 
 
 
