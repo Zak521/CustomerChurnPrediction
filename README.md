@@ -37,8 +37,3 @@ Machine Learning Models
 
 PowerBI
 Constructed a interactive dashboard to convey finding and insights about customer churn rates
-
-
-## ⚙️ How to Run the Code
-1. Clone this repository
-2. Install dependencies:  
