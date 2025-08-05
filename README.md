@@ -3,7 +3,7 @@ Customer Churn Prediction with Python and Power BI
 Overview
 This project predicts customer churn for a telecom company using machine learning models and presents key insights with Power BI. It demonstrates the end-to-end process of:
 - Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
+- Exploratory data analysis
 - Predictive modeling (Logistic Regression & Random Forest)
 - Model evaluation (Confusion Matrix, Classification Report, ROC AUC)
 - Exporting results to CSV for use in a Power BI dashboard
